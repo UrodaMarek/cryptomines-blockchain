@@ -87,6 +87,7 @@ class BlockchainMutexPriority(enum.IntEnum):
 
 class Blockchain(BlockchainInterface):
     constants: ConsensusConstants
+    execution_client: ExecutionClient
 
     # peak of the blockchain
     _peak_height: Optional[uint32]
@@ -118,6 +119,7 @@ class Blockchain(BlockchainInterface):
         coin_store: CoinStore,
         block_store: BlockStore,
         consensus_constants: ConsensusConstants,
+        execution_client: ExecutionClient,
         blockchain_dir: Path,
         reserved_cores: int,
         multiprocessing_context: Optional[BaseContext] = None,
