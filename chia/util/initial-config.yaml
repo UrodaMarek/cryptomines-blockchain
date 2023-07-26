@@ -319,15 +319,6 @@ timelord:
     public_key: "config/ssl/timelord/public_timelord.key"
 
 full_node:
-  execution_client:
-    host: *self_hostname
-    port: 4451
-  # Target address for block rewards and fees
-  coinbase: "0x0000000000000000000000000000000000000000"
-  # Optimistic import allows a full_node client to import, process, and consider a full_node block for its forkchoice head,
-  # even though it has not validated its execution payload
-  optimistic_import: True
-
   # The full node server (if run) will run on this port
   port: 44411
 
@@ -452,6 +443,9 @@ full_node:
   wallet_peer:
     host: *self_hostname
     port: 44416
+  execution_client:
+    host: *self_hostname
+    port: 4451
   logging: *logging
   network_overrides: *network_overrides
   selected_network: *selected_network
@@ -466,6 +460,8 @@ full_node:
     public_crt: "config/ssl/full_node/public_full_node.crt"
     public_key: "config/ssl/full_node/public_full_node.key"
   use_chia_loop_policy: True
+
+  coinbase: "0x0000000000000000000000000000000000000000"
 
 ui:
   # The ui node server (if run) will run on this port

@@ -191,6 +191,7 @@ class Err(Enum):
     
     EXECUTION_INVALID_PAYLOAD = 153
     EXECUTION_SYNCING = 154
+    EXECUTION_ACCEPTED = 155
 
 
 class ValidationError(Exception):
