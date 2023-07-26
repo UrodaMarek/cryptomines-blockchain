@@ -319,8 +319,9 @@ timelord:
     public_key: "config/ssl/timelord/public_timelord.key"
 
 full_node:
-  # Execution client Engine API endpoint
-  execution_endpoint: http://127.0.0.1:4451
+  execution_client:
+    host: *self_hostname
+    port: 4451
   # Target address for block rewards and fees
   coinbase: "0x0000000000000000000000000000000000000000"
   # Optimistic import allows a full_node client to import, process, and consider a full_node block for its forkchoice head,
