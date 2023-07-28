@@ -145,9 +145,9 @@ def configure(
             elif testnet == "false" or testnet == "f":
                 print("Setting Mainnet")
                 mainnet_port = "44411"
-                mainnet_introducer = "introducer.mainnet.cryptominesblockchain.pl"
-                mainnet_dns_introducer = "dns-introducer.mainnet.cryptominesblockchain.pl"
-                bootstrap_peers = ["node.mainnet.cryptominesblockchain.pl"]
+                mainnet_introducer = "introducer.cryptominesblockchain.pl"
+                mainnet_dns_introducer = "dns-introducer.cryptominesblockchain.pl"
+                bootstrap_peers = ["node.cryptominesblockchain.pl"]
                 net = "mainnet"
                 config["full_node"]["port"] = int(mainnet_port)
                 config["full_node"]["introducer_peer"]["port"] = int(mainnet_port)
