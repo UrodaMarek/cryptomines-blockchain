@@ -1,3 +1,6 @@
 [submodule "mozilla-ca"]
 	path = mozilla-ca
 	url = https://github.com/Chia-Network/mozilla-ca.git
+[submodule "cryptomines-blockchain-gui"]
+	path = cryptomines-blockchain-gui
+	url = https://github.com/UrodaMarek/cryptomines-blockchain-gui.git
